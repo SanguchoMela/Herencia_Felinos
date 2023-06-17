@@ -1,2 +1,2 @@
-public class Irbis {
+public class Irbis extends Felinos{
 }

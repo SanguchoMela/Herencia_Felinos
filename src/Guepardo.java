@@ -1,2 +1,2 @@
-public class Guepardo {
+public class Guepardo extends Felinos{
 }

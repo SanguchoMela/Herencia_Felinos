@@ -1,2 +1,2 @@
-public class Puma {
+public class Puma extends Felinos{
 }

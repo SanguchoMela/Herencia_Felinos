@@ -1,2 +1,2 @@
-public class Ocelote {
+public class Ocelote extends Felinos{
 }

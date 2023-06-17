@@ -1,2 +1,2 @@
-public class Leon {
+public class Leon extends Felinos{
 }
