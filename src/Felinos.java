@@ -1,16 +1,40 @@
 public class Felinos {
+    //atributos
+    private String tipoFelino; //felino verdadero o panterino
+    private String genero;
     private String nombreCientifico;
-    private int edad;
+    private int vidaMax; //en años
     private double peso;
+    private int velocidadMax; //en km/h
     private String estiloCaza;
 
-    public Felinos(){}
+    //Constructores
+    public Felinos(){} //vacio
 
-    public Felinos(String nombreCientifico, int edad, double peso, String estiloCaza) {
+    public Felinos(String tipoFelino, String genero,String nombreCientifico, int vidaMax, double peso, int velocidadMax,String estiloCaza) {
+        this.tipoFelino = tipoFelino;
+        this.genero = genero;
         this.nombreCientifico = nombreCientifico;
-        this.edad = edad;
+        this.vidaMax = vidaMax;
         this.peso = peso;
         this.estiloCaza = estiloCaza;
+    }
+
+    //Setters y Getters
+    public String getTipoFelino() {
+        return tipoFelino;
+    }
+
+    public void setTipoFelino(String tipoFelino) {
+        this.tipoFelino = tipoFelino;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
     public String getNombreCientifico() {
@@ -21,12 +45,12 @@ public class Felinos {
         this.nombreCientifico = nombreCientifico;
     }
 
-    public int getEdad() {
-        return edad;
+    public int getVidaMax() {
+        return vidaMax;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setVidaMax(int vidaMax) {
+        this.vidaMax = vidaMax;
     }
 
     public double getPeso() {
@@ -37,6 +61,14 @@ public class Felinos {
         this.peso = peso;
     }
 
+    public int getVelocidadMax() {
+        return velocidadMax;
+    }
+
+    public void setVelocidadMax(int velocidadMax) {
+        this.velocidadMax = velocidadMax;
+    }
+
     public String getEstiloCaza() {
         return estiloCaza;
     }
@@ -45,6 +77,7 @@ public class Felinos {
         this.estiloCaza = estiloCaza;
     }
 
+    //Metodos
     public void cazar(){
         System.out.println("Este es el método cazar");
     }
