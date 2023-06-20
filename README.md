@@ -6,6 +6,6 @@ Implementar una aplicación que permita ingresar felinos de al menos 5 especies.
 
 Entregable: repositorio de github con Readme indicando el contexto del ejercicio y capturas de pantalla del sistema funcionando.
 ## Diagrama UML
-![image](https://github.com/SanguchoMela/Herencia_Felinos/assets/117743859/fbc8507f-d8d4-4f74-9c44-0982b200211d)
+![image](https://github.com/SanguchoMela/Herencia_Felinos/assets/117743859/99d2da62-737b-48fb-8832-6fd016732391)
 
 ## Ejecución del programa
