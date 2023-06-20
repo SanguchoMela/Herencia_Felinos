@@ -1,56 +1,55 @@
+//clase padre
 public class Felinos {
     //atributos
-    private String tipoFelino; //felino verdadero o panterino
-    private String genero;
-    private String nombreCientifico;
-    private int vidaMax; //en años
-    private double peso;
-    private int velocidadMax; //en km/h
-    private String estiloCaza;
+    private int subEspecie;
+    private String nombre;
+    private int edad;
+    private double tamanio; //longitud en m
+    private double peso; //en kg
 
     //Constructores
     public Felinos(){} //vacio
 
-    public Felinos(String tipoFelino, String genero,String nombreCientifico, int vidaMax, double peso, int velocidadMax,String estiloCaza) {
-        this.tipoFelino = tipoFelino;
-        this.genero = genero;
-        this.nombreCientifico = nombreCientifico;
-        this.vidaMax = vidaMax;
+    public Felinos(int subEspecie, String nombre, int edad, double tamanio, double peso) {
+        this.subEspecie = subEspecie;
+        this.nombre = nombre;
+        this.edad = edad;
+        this.tamanio = tamanio;
         this.peso = peso;
-        this.estiloCaza = estiloCaza;
     }
 
     //Setters y Getters
-    public String getTipoFelino() {
-        return tipoFelino;
+
+    public int getSubEspecie() {
+        return subEspecie;
     }
 
-    public void setTipoFelino(String tipoFelino) {
-        this.tipoFelino = tipoFelino;
+    public void setSubEspecie(int subEspecie) {
+        this.subEspecie = subEspecie;
     }
 
-    public String getGenero() {
-        return genero;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getNombreCientifico() {
-        return nombreCientifico;
+    public int getEdad() {
+        return edad;
     }
 
-    public void setNombreCientifico(String nombreCientifico) {
-        this.nombreCientifico = nombreCientifico;
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 
-    public int getVidaMax() {
-        return vidaMax;
+    public double getTamanio() {
+        return tamanio;
     }
 
-    public void setVidaMax(int vidaMax) {
-        this.vidaMax = vidaMax;
+    public void setTamanio(double tamanio) {
+        this.tamanio = tamanio;
     }
 
     public double getPeso() {
@@ -61,25 +60,18 @@ public class Felinos {
         this.peso = peso;
     }
 
-    public int getVelocidadMax() {
-        return velocidadMax;
-    }
-
-    public void setVelocidadMax(int velocidadMax) {
-        this.velocidadMax = velocidadMax;
-    }
-
-    public String getEstiloCaza() {
-        return estiloCaza;
-    }
-
-    public void setEstiloCaza(String estiloCaza) {
-        this.estiloCaza = estiloCaza;
-    }
-
     //Metodos
-    public void cazar(){
-        System.out.println("Este es el método cazar");
+    private void cazar(){
+        System.out.println("Este es el metodo cazar");
+    }
+    private void comer(){
+        System.out.println("Este es el metodo comerr");
+    }
+    private void dormir(){
+        System.out.println("Este es el metodo dormir");
+    }
+    private void envejecer(){
+        System.out.println("Este es el metodo envejecer");
     }
 }
 
