@@ -6,8 +6,8 @@ public class Irbis extends Felinos{
         super();
     }
 
-    public Irbis(int subEspecie, String nombre, int edad, double tamanio, double peso, String pelaje, String presas) {
-        super(subEspecie, nombre, edad, tamanio, peso);
+    public Irbis(String nombre, int edad, double tamanio, double peso, String pelaje, String presas) {
+        super(nombre, edad, tamanio, peso);
         this.pelaje = pelaje;
         this.presas = presas;
     }
@@ -29,12 +29,21 @@ public class Irbis extends Felinos{
     }
 
     private void caminarNieve(){
-        System.out.println("Este es el metodo para caminar sobre la nieve");
+        System.out.println("\t"+getNombre()+" esta caminando sobre la nieve");
     }
     private void escalarRocas(){
-        System.out.println("Este es el metodo para escalar rocas");
+        System.out.println("\t"+getNombre()+" esta escalando rocas");
     }
-    private void adaptarFrio(){
-        System.out.println("Este es el metodo para adaptarse al frio");
+
+    public void mostrarInfo(){
+        System.out.println("\nInformación registrada");
+        System.out.println("\tNombre: "+getNombre());
+        System.out.println("\tEdad: "+getEdad()+" años");
+        System.out.println("\tTamaño: "+getTamanio()+"m");
+        System.out.println("\tPeso: "+getPeso()+"kg");
+        System.out.println("\tPelaje: "+getPelaje());
+        System.out.println("\tPresas: "+getPresas());
+        caminarNieve();
+        escalarRocas();
     }
 }

@@ -1,7 +1,6 @@
 //clase padre
 public class Felinos {
     //atributos
-    private int subEspecie;
     private String nombre;
     private int edad;
     private double tamanio; //longitud en m
@@ -10,8 +9,7 @@ public class Felinos {
     //Constructores
     public Felinos(){} //vacio
 
-    public Felinos(int subEspecie, String nombre, int edad, double tamanio, double peso) {
-        this.subEspecie = subEspecie;
+    public Felinos(String nombre, int edad, double tamanio, double peso) {
         this.nombre = nombre;
         this.edad = edad;
         this.tamanio = tamanio;
@@ -19,15 +17,6 @@ public class Felinos {
     }
 
     //Setters y Getters
-
-    public int getSubEspecie() {
-        return subEspecie;
-    }
-
-    public void setSubEspecie(int subEspecie) {
-        this.subEspecie = subEspecie;
-    }
-
     public String getNombre() {
         return nombre;
     }
@@ -61,17 +50,15 @@ public class Felinos {
     }
 
     //Metodos
-    private void cazar(){
-        System.out.println("Este es el metodo cazar");
+    public void cazar(){
+        System.out.println("\t"+getNombre()+ " esta cazando");
     }
-    private void comer(){
-        System.out.println("Este es el metodo comerr");
+    public void comer(){
+        System.out.println("\t"+getNombre()+" esta comiendo");
     }
-    private void dormir(){
-        System.out.println("Este es el metodo dormir");
+    public void dormir(){
+        System.out.println("\t"+getNombre()+" esta durmiendo");
     }
-    private void envejecer(){
-        System.out.println("Este es el metodo envejecer");
-    }
+
 }
 

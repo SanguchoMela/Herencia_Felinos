@@ -1,16 +1,14 @@
 public class Leon extends Felinos{
     private String melena;
-    private String rugido;
     private String manada;
 
     public Leon (){
         super();
     }
 
-    public Leon(int subEspecie, String nombre, int edad, double tamanio, double peso, String melena, String rugido, String manada) {
-        super(subEspecie, nombre, edad, tamanio, peso);
+    public Leon(String nombre, int edad, double tamanio, double peso, String melena, String manada) {
+        super(nombre, edad, tamanio, peso);
         this.melena = melena;
-        this.rugido = rugido;
         this.manada = manada;
     }
 
@@ -22,14 +20,6 @@ public class Leon extends Felinos{
         this.melena = melena;
     }
 
-    public String getRugido() {
-        return rugido;
-    }
-
-    public void setRugido(String rugido) {
-        this.rugido = rugido;
-    }
-
     public String getManada() {
         return manada;
     }
@@ -39,9 +29,21 @@ public class Leon extends Felinos{
     }
 
     private void cazarGrupal(){
-        System.out.println("Este es el metodo para cazar en grupo");
+        System.out.println("\t"+getNombre()+" esta cazando en grupo");
     }
     private void liderarManada(){
-        System.out.println("Este es el metodo para liderar la manada");
+        System.out.println("\t"+getNombre()+" esta liderando la manada");
+    }
+
+    public void mostrarInfo(){
+        System.out.println("\nInformación registrada");
+        System.out.println("\tNombre: "+getNombre());
+        System.out.println("\tEdad: "+getEdad()+" años");
+        System.out.println("\tTamaño: "+getTamanio()+"m");
+        System.out.println("\tPeso: "+getPeso()+"kg");
+        System.out.println("\tMelena: "+getMelena());
+        System.out.println("\tManada: "+getManada());
+        cazarGrupal();
+        liderarManada();
     }
 }

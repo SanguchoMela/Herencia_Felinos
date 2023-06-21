@@ -1,23 +1,24 @@
 public class Ocelote extends Felinos {
-    private String manchasDistintivas;
+    private String manchaPelo;
     private String territorio;
 
     public Ocelote(){
         super();
     }
 
-    public Ocelote(int subEspecie, String nombre, int edad, double tamanio, double peso, String manchasDistintivas, String territorio) {
-        super(subEspecie, nombre, edad, tamanio, peso);
-        this.manchasDistintivas = manchasDistintivas;
+    public Ocelote(String nombre, int edad, double tamanio, double peso, String manchaPelo, String territorio) {
+        super(nombre, edad, tamanio, peso);
+        this.manchaPelo = manchaPelo;
         this.territorio = territorio;
     }
 
-    public String getManchasDistintivas() {
-        return manchasDistintivas;
+    public String getManchaPelo() {
+
+        return manchaPelo;
     }
 
-    public void setManchasDistintivas(String manchasDistintivas) {
-        this.manchasDistintivas = manchasDistintivas;
+    public void setManchaPelo(String manchaPelo) {
+        this.manchaPelo = manchaPelo;
     }
 
     public String getTerritorio() {
@@ -29,9 +30,21 @@ public class Ocelote extends Felinos {
     }
 
     private void caminarSinRuido(){
-        System.out.println("Este es el metodo para caminar sin hacer ruido");
+        System.out.println("\t"+getNombre()+" esta caminando sin hacer ruido");
     }
     private void treparArboles(){
-        System.out.println("Este es el metodo para trepar arboles");
+        System.out.println("\t"+getNombre()+" esta trepando árboles");
+    }
+
+    public void mostrarInfo(){
+        System.out.println("\nInformación registrada");
+        System.out.println("\tNombre: "+getNombre());
+        System.out.println("\tEdad: "+getEdad()+" años");
+        System.out.println("\tTamaño: "+getTamanio()+"m");
+        System.out.println("\tPeso: "+getPeso()+"kg");
+        System.out.println("\tManchas en el pelo: "+getManchaPelo());
+        System.out.println("\tTerritorio: "+getTerritorio());
+        caminarSinRuido();
+        treparArboles();
     }
 }

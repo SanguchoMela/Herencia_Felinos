@@ -6,8 +6,8 @@ public class Guepardo extends Felinos{
         super();
     }
 
-    public Guepardo(int subEspecie, String nombre, int edad, double tamanio, double peso, String manchas, int velocidadMax) {
-        super(subEspecie, nombre, edad, tamanio, peso);
+    public Guepardo(String nombre, int edad, double tamanio, double peso, String manchas, int velocidadMax) {
+        super(nombre, edad, tamanio, peso);
         this.manchas = manchas;
         this.velocidadMax = velocidadMax;
     }
@@ -29,10 +29,22 @@ public class Guepardo extends Felinos{
     }
 
 
-    private void acelerar(){
-        System.out.println("Este es el metodo acelerar");
+    public void acelerar(){
+        System.out.println("\t"+getNombre()+" esta acelerando");
     }
-    private void saltar(){
-        System.out.println("Este es el metodo saltar");
+    public void saltar(){
+        System.out.println("\t"+getNombre()+" esta saltando");
+    }
+
+    public void mostrarInfo(){
+        System.out.println("\nInformación registrada");
+        System.out.println("\tNombre: "+getNombre());
+        System.out.println("\tEdad: "+getEdad()+" años");
+        System.out.println("\tTamaño: "+getTamanio()+"m");
+        System.out.println("\tPeso: "+getPeso()+"kg");
+        System.out.println("\tManchas: "+getManchas());
+        System.out.println("\tVelocidad máxima: "+getVelocidadMax()+"km/h");
+        acelerar();
+        saltar();
     }
 }

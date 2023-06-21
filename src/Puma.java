@@ -6,8 +6,8 @@ public class Puma extends Felinos{
         super();
     }
 
-    public Puma(int subEspecie, String nombre, int edad, double tamanio, double peso, String zonasCaza, String coloracion) {
-        super(subEspecie, nombre, edad, tamanio, peso);
+    public Puma(String nombre, int edad, double tamanio, double peso, String zonasCaza, String coloracion) {
+        super(nombre, edad, tamanio, peso);
         this.zonasCaza = zonasCaza;
         this.coloracion = coloracion;
     }
@@ -29,9 +29,21 @@ public class Puma extends Felinos{
     }
 
     private void sigilar(){
-        System.out.println("Este es el metodo para ir con sigilo");
+        System.out.println("\t"+getNombre()+" esta sigilando");
     }
     private void nadar(){
-        System.out.println("Este es el metodo para nadar");
+        System.out.println("\t"+getNombre()+" esta nadando");
+    }
+
+    public void mostrarInfo(){
+        System.out.println("\nInformación registrada");
+        System.out.println("\tNombre: "+getNombre());
+        System.out.println("\tEdad: "+getEdad()+" años");
+        System.out.println("\tTamaño: "+getTamanio()+"m");
+        System.out.println("\tPeso: "+getPeso()+"kg");
+        System.out.println("\tZonas de caza: "+getZonasCaza());
+        System.out.println("\tColoración: "+getColoracion());
+        sigilar();
+        nadar();
     }
 }
