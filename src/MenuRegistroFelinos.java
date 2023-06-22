@@ -11,8 +11,8 @@ public class MenuRegistroFelinos {
         //menu recursivo
         while (!salir){
 
-            System.out.println("-------------- F E L I N O S --------------");
-            System.out.println("Menú principal");
+            System.out.println("\n-------------- F E L I N O S --------------");
+            System.out.println("MENÚ PRINCIPAL  ");
             System.out.println("Seleccione la especie de la que desea registrar datos");
             System.out.println("1. Guepardo");
             System.out.println("2. Ocelote");
@@ -140,8 +140,8 @@ public class MenuRegistroFelinos {
                     System.out.print("\tMelena: ");
                     entrada.nextLine();
                     String melenaL = entrada.nextLine();
-                    System.out.print("\tManada: ");
-                    String manadaL = entrada.nextLine();
+                    System.out.print("\tManada (n° miembros): ");
+                    int manadaL = entrada.nextInt();
 
                     Leon miLeon = new Leon(nomL,edadL,tamL,pesoL,melenaL,manadaL);
 

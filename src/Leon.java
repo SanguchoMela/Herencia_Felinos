@@ -1,12 +1,12 @@
 public class Leon extends Felinos{
     private String melena;
-    private String manada;
+    private int manada;
 
     public Leon (){
         super();
     }
 
-    public Leon(String nombre, int edad, double tamanio, double peso, String melena, String manada) {
+    public Leon(String nombre, int edad, double tamanio, double peso, String melena, int manada) {
         super(nombre, edad, tamanio, peso);
         this.melena = melena;
         this.manada = manada;
@@ -20,11 +20,11 @@ public class Leon extends Felinos{
         this.melena = melena;
     }
 
-    public String getManada() {
+    public int getManada() {
         return manada;
     }
 
-    public void setManada(String manada) {
+    public void setManada(int manada) {
         this.manada = manada;
     }
 
@@ -42,7 +42,7 @@ public class Leon extends Felinos{
         System.out.println("\tTamaño: "+getTamanio()+"m");
         System.out.println("\tPeso: "+getPeso()+"kg");
         System.out.println("\tMelena: "+getMelena());
-        System.out.println("\tManada: "+getManada());
+        System.out.println("\tManada: "+getManada()+"miembros");
         cazarGrupal();
         liderarManada();
     }
